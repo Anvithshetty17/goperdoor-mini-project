@@ -22,3 +22,26 @@ build/
 # IDEs
 .vscode/
 .idea/
+
+# Frontend
+frontend/node_modules/
+frontend/build/
+
+# Backend
+backend/node_modules/
+
+# Package manager locks
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+
+# dotenv local files
+.env
+.env.local
+.env.*.local
+
+# Coverage
+coverage/
+
+# Misc
+*.pem
