@@ -1529,15 +1529,15 @@ The Super Admin Module provides system-wide management capabilities for platform
                │
                │ HTTPS/REST API
                │
-┌──────────────▼──────────────────────────────────────────┐
-│                  APPLICATION LAYER                       │
-├─────────────────────────────────────────────────────────┤
-│              Express.js Server (Node.js)                 │
-│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐  │
-│  │   Bus API    │  │  Store API   │  │  Misc APIs   │  │
-│  │   Routes     │  │   Routes     │  │   Routes     │  │
-│  └──────────────┘  └──────────────┘  └──────────────┘  │
-└──────────────┬──────────────────────────────────────────┘
+┌──────────────▼───────────────────────────┐
+│                  APPLICATION LAYER       │
+├──────────────────────────────────────────┤
+│              Express.js Server (Node.js) │
+│  ┌──────────────┐  ┌──────────────┐      │
+│  │   Bus API    │  │  Store API   │      │
+│  │   Routes     │  │   Routes     │      │
+│  └──────────────┘  └──────────────┘      │
+└──────────────┬───────────────────────────┘
                │
                │ Mongoose ODM
                │
@@ -1556,8 +1556,8 @@ The Super Admin Module provides system-wide management capabilities for platform
 ┌──────────────▼──────────────────────────────────────────┐
 │                  EXTERNAL SERVICES                       │
 ├─────────────────────────────────────────────────────────┤
-│  Cloudinary    │  Web Push    │  Email.js               │
-│  (Images)      │  (Notify)    │  (Contact)              │
+│  Cloudinary    │  Email.js               │
+│  (Images)      │   (Contact)              │
 └─────────────────────────────────────────────────────────┘
 ```
 
@@ -1581,7 +1581,7 @@ The Super Admin Module provides system-wide management capabilities for platform
 │  │ CONTENT MODULE  │  │  UTILITY MODULE │            │
 │  ├─────────────────┤  ├─────────────────┤            │
 │  │ - About Us      │  │ - Contact Form  │            │
-│  │ - Temple Info   │  │ - Notifications │            │
+│  │ - Temple Info   │  │                 │            │
 │  │ - Wisdom Wall   │  │ - Analytics     │            │
 │  │ - AI Hub        │  │ - SEO/Ads       │            │
 │  └─────────────────┘  └─────────────────┘            │
@@ -1600,20 +1600,20 @@ The Super Admin Module provides system-wide management capabilities for platform
         ▼                 ▼                 ▼
 ┌───────────────┐ ┌───────────────┐ ┌───────────────┐
 │  Bus Search   │ │ Store Browse  │ │ Contact/Info  │
-└───────┬───────┘ └───────┬───────┘ └───────┬───────┘
-        │                 │                 │
-        ▼                 ▼                 ▼
+└───────┬───────┘ └───────┬───────┘ └──────────────┘
+        │                 │                 
+        ▼                 ▼                 
 ┌─────────────────────────────────────────────────┐
 │          GOPERDOOR APPLICATION                  │
-│  ┌────────────┐  ┌────────────┐  ┌────────────┐│
-│  │   Bus API  │  │ Store API  │  │  Misc API  ││
-│  └────────────┘  └────────────┘  └────────────┘│
-└───────────┬──────────────┬──────────────┬───────┘
-            │              │              │
-            ▼              ▼              ▼
-    ┌──────────────┐ ┌──────────────┐ ┌──────────────┐
-    │ Bus Database │ │Store Database│ │   Services   │
-    └──────────────┘ └──────────────┘ └──────────────┘
+│  ┌────────────┐  ┌────────────┐                  │
+│  │   Bus API  │  │ Store API  │                 │
+│  └────────────┘  └────────────┘                 │
+└───────────┬──────────────┬─────────────────────┘
+            │              │              
+            ▼              ▼             
+    ┌──────────────┐ ┌──────────────┐
+    │ Bus Database │ │Store Database│ ]
+    └──────────────┘ └──────────────┘ 
 ```
 
 ### 3.2 Detailed Design
