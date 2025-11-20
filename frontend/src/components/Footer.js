@@ -52,7 +52,7 @@ const Footer = () => {
         <div className="copyright">© 2024 GoPerdoor. All rights reserved.</div>
         <div className="developer">
           <Code size={14} />
-          <span>Built by Anvith & Rohan</span>
+          <span>Built by Anvith & Apoorva</span>
         </div>
       </div>
 
